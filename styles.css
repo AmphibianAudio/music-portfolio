@@ -435,9 +435,8 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 20px;
     border: 1px solid #333333;
     transition: all 0.3s ease;
-    display: flex; /* Делаем контейнер флекс-элементом */
-    flex-direction: column; /* Располагаем элементы внутри в колонку */
-    justify-content: space-between; /* Распределяем пространство между элементами */
+    display: grid; /* Используем Grid для внутреннего содержимого */
+    grid-template-rows: auto 1fr; /* Первая строка для заголовка (автоматическая высота), вторая для списка (занимает все оставшееся пространство) */
 }
 
 .service-category:hover {
@@ -453,7 +452,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .service-category ul {
     list-style: none;
-    flex-grow: 1; /* Позволяет списку занимать все доступное пространство */
 }
 
 .service-category li {
