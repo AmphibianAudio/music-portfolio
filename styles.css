@@ -436,7 +436,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.3s ease;
     display: grid; /* Use grid for internal layout */
     grid-template-rows: auto 1fr; /* Header and list take equal space */
-    height: 100%; /* Ensure full height */
+    min-height: 400px; /* Set a minimum height to ensure consistency */
 }
 
 .service-category:hover {
@@ -455,15 +455,19 @@ h1, h2, h3, h4, h5, h6 {
     list-style: none;
     display: grid; /* Use grid for list items */
     grid-template-columns: 1fr; /* Single column */
-    grid-auto-rows: 1em; /* Equal height for each li */
+    grid-auto-rows: minmax(1.5em, auto); /* Equal minimum height for each li, auto-adjust if needed */
     gap: 0.8rem; /* Match the margin-bottom of li */
     align-content: start; /* Align content to the top */
+    padding-top: 0; /* Remove any unwanted padding */
 }
 
 .service-category li {
     color: #cccccc;
     padding-left: 1.5rem;
     position: relative;
+    min-height: 1.5em; /* Ensure each li has a minimum height */
+    display: flex;
+    align-items: center; /* Vertically center text within li */
 }
 
 .service-category li::before {
