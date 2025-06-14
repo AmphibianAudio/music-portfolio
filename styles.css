@@ -333,7 +333,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Изменяем минимальную ширину элемента */
     gap: 2rem;
 }
 
@@ -423,8 +423,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Изменяем минимальную ширину элемента */
     gap: 2rem;
+
 }
 
 .service-category {
