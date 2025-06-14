@@ -423,20 +423,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto repeat(4, 1fr); /* 4 строки для пунктов */
     gap: 2rem;
-    align-items: start; /* Align items to the top */
 }
 
 .service-category {
-    background: #1a1a1a;
-    padding: 2rem;
-    border-radius: 20px;
-    border: 1px solid #333333;
-    transition: all 0.3s ease;
-    display: grid; /* Use grid for internal layout */
-    grid-template-rows: auto 1fr; /* Header and list take equal space */
-    min-height: 400px; /* Set a minimum height to ensure consistency */
+    display: grid;
+    grid-template-rows: auto 1fr; /* Заголовок + список */
+    height: 100%;
 }
 
 .service-category:hover {
@@ -445,32 +440,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-category h3 {
-    font-size: 1.3rem;
+    grid-row: 1;
     margin-bottom: 1.5rem;
-    color: #667eea;
-    margin-bottom: 1rem; /* Keep spacing */
 }
 
 .service-category ul {
-    list-style: none;
-    display: grid; /* Use grid for list items */
-    grid-template-columns: 1fr; /* Single column */
-    grid-auto-rows: minmax(1.5em, auto); /* Equal minimum height for each li, auto-adjust if needed */
-    gap: 0.8rem; /* Match the margin-bottom of li */
-    align-content: start; /* Align content to the top */
-    padding-top: 0; /* Remove any unwanted padding */
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: repeat(4, auto); /* Фиксируем 4 строки */
+    align-content: start;
+    height: 100%;
 }
 
 .service-category li {
-    color: #cccccc;
-    padding-left: 1.5rem;
-    position: relative;
-    min-height: 1.5em; /* Ensure each li has a minimum height */
+    min-height: 40px; /* Минимальная высота пункта */
     display: flex;
-    align-items: center; /* Vertically center text within li */
+    align-items: center;
+    margin-bottom: 0.8rem;
 }
 
-.service-category li::before {
+.service-category li:before {
     content: '▶';
     position: absolute;
     left: 0;
