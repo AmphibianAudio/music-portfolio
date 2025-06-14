@@ -425,9 +425,8 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2rem;
-    grid-auto-rows: 1fr; /* Добавьте эту строку */
+    align-items: start; /* Ensures vertical alignment across columns */
 }
-
 
 .service-category {
     background: #1a1a1a;
@@ -435,10 +434,9 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 20px;
     border: 1px solid #333333;
     transition: all 0.3s ease;
-    display: grid; /* Используем Grid для внутреннего содержимого */
-    grid-template-rows: auto 1fr; /* Первая строка для заголовка (автоматическая высота), вторая для списка (занимает все оставшееся пространство) */
-    display: flex; /* Делаем контейнер флекс-элементом */
-    flex-direction: column; /* Располагаем элементы внутри в колонку */
+    display: flex; /* Use flex for internal layout */
+    flex-direction: column; /* Stack items vertically */
+    height: 100%; /* Ensure the container takes full height */
 }
 
 .service-category:hover {
@@ -450,11 +448,15 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.3rem;
     margin-bottom: 1.5rem;
     color: #667eea;
-    margin-bottom: 1rem; /* Оставьте отступ под заголовком */
+    margin-bottom: 1rem; /* Keep the spacing */
+    flex-shrink: 0; /* Prevent the header from shrinking */
 }
 
 .service-category ul {
     list-style: none;
+    display: flex; /* Use flex within ul to align items */
+    flex-direction: column; /* Stack list items vertically */
+    flex-grow: 1; /* Allow the list to grow and fill space */
 }
 
 .service-category li {
@@ -462,6 +464,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.8rem;
     padding-left: 1.5rem;
     position: relative;
+    align-self: flex-start; /* Align each li to the start */
 }
 
 .service-category li::before {
