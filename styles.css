@@ -345,6 +345,9 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    display: flex; /* Добавляем Flexbox */
+    flex-direction: column; /* Располагаем элементы в колонку */
+    justify-content: space-between; /* Распределяем пространство между элементами */
 }
 
 .portfolio-item::before {
@@ -385,6 +388,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #cccccc;
     margin-bottom: 2rem;
     line-height: 1.6;
+    flex-grow: 1; /* Позволяет параграфу занимать все доступное пространство */
 }
 
 .portfolio-examples {
