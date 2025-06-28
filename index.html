@@ -1022,25 +1022,8 @@
             observer.observe(el);
         });
 
-        // Состояния для хранения позиции воспроизведения
+        // Состояния для хранения позиции воспроизведения аудио
         const audioStates = new Map();
-        const videoStates = new Map();
-        
-        // Автоматическая остановка других медиа и сохранение позиции
-        function handleMediaPlay(event) {
-            const currentMedia = event.target;
-            
-            // Останавливаем все другие аудио (сохраняя позицию)
-            document.querySelectorAll('audio').forEach(audio => {
-                if (audio !== currentMedia && !audio.paused) {
-                    audioStates.set(audio, audio.currentTime);
-                    audio.pause();
-                }
-            });
-            
-            // Останавливаем все видео
-            stopAllVideos();
-        }
         
         // Инициализация аудио-плееров
         document.querySelectorAll('audio').forEach(audio => {
@@ -1052,9 +1035,17 @@
             audioStates.set(audio, startTime);
             
             // Обработчик воспроизведения
-            audio.addEventListener('play', handleMediaPlay);
+            audio.addEventListener('play', function() {
+                // Останавливаем все другие аудио (сохраняя позицию)
+                document.querySelectorAll('audio').forEach(otherAudio => {
+                    if (otherAudio !== audio && !otherAudio.paused) {
+                        audioStates.set(otherAudio, otherAudio.currentTime);
+                        otherAudio.pause();
+                    }
+                });
+            });
             
-            // Восстанавливаем позицию при паузе/остановке
+            // Сохраняем позицию при паузе/остановке
             audio.addEventListener('pause', () => {
                 audioStates.set(audio, audio.currentTime);
             });
@@ -1064,38 +1055,6 @@
                 if (audioStates.has(audio)) {
                     audio.currentTime = audioStates.get(audio);
                 }
-            });
-        });
-        
-        // Функция для остановки YouTube видео
-        function stopAllVideos() {
-            document.querySelectorAll('.video-container iframe').forEach(iframe => {
-                const src = iframe.src;
-                iframe.src = '';
-                setTimeout(() => { iframe.src = src; }, 100);
-            });
-        }
-        
-        // Обработчики для YouTube видео
-        document.querySelectorAll('.video-container').forEach(container => {
-            container.addEventListener('click', () => {
-                // Останавливаем все аудио при воспроизведении видео
-                document.querySelectorAll('audio').forEach(audio => {
-                    if (!audio.paused) {
-                        audioStates.set(audio, audio.currentTime);
-                        audio.pause();
-                    }
-                });
-                
-                // Останавливаем другие видео
-                document.querySelectorAll('.video-container').forEach(other => {
-                    if (other !== container) {
-                        const iframe = other.querySelector('iframe');
-                        const src = iframe.src;
-                        iframe.src = '';
-                        setTimeout(() => { iframe.src = src; }, 100);
-                    }
-                });
             });
         });
 
