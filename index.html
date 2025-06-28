@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Имя Фамилия | Профессиональный музыкант и звукорежиссёр</title>
+    <title>Иван Иванов | Профессиональный музыкант и звукорежиссёр</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -694,40 +694,40 @@
             <a href="#studio">Студия</a>
             <a href="#mixing">Сведение</a>
             <a href="#arrangement">Аранжировка</a>
-            <a href="#music"></a>
+            <a href="#music">Музыка</a>
             <a href="#contact">Контакты</a>
         </nav>
     </header>
 
     <!-- Секция "Обо мне" -->
-  <section id="about">
-    <div class="profile-container">
-        <div class="profile-frame">
-            <div class="profile-img">
-                <img src="images/your-photo.jpg" alt="Имя Фамилия">
+    <section id="about">
+        <div class="profile-container">
+            <div class="profile-frame">
+                <div class="profile-img">
+                    <img src="images/your-photo.jpg" alt="Иван Иванов">
+                </div>
+            </div>
+            <div class="decor-note">♬</div>
+            <div class="decor-note">♪</div>
+            <div class="decor-note">♫</div>
+            <div class="decor-note">♩</div>
+        </div>
+        
+        <div class="about-content">
+            <h1 class="name-title">Иван Иванов</h1>
+            <p class="tagline">Музыкант • Звукорежиссёр • Аранжировщик</p>
+            
+            <div class="bio">
+                <p>Более 10 лет я создаю звуковые ландшафты, которые оживляют эмоции и рассказывают истории. Моя специализация — превращение сырых идей в отполированные музыкальные произведения, где каждая нота занимает своё идеальное место.</p>
+                <p>Работаю в различных жанрах: от джаза и классики до электроники и экспериментальной музыки. Мои работы — это синтез технического мастерства и художественного видения, где технологии служат творчеству, а не наоборот.</p>
+            </div>
+            
+            <div>
+                <a href="#mixing" class="btn" style="background: #d4af37; color: #0a0a16; border: 1px solid #d4af37; margin-right: 15px;">Послушать</a>
+                <a href="#contact" class="btn">Связаться</a>
             </div>
         </div>
-        <div class="decor-note">♬</div>
-        <div class="decor-note">♪</div>
-        <div class="decor-note">♫</div>
-        <div class="decor-note">♩</div>
-    </div>
-    
-    <div class="about-content">
-        <h1 class="name-title">Иван Иванов</h1>
-        <p class="tagline">нт • Звукорежиссёр • Аранжировщик</p>
-        
-        <div class="bio">
-            <p>Более 10 лет я создаю звуковые ландшафты, которые оживляют эмоции и рассказывают истории. Моя специализация — превращение сырых идей в отполированные льные произведения, где каждая нота занимает своё идеальное место.</p>
-            <p>Работаю в различных жанрах: от джаза и классики до электроники и экспериментальной музыки. Мои работы — это синтез технического мастерства и художественного видения, где технологии служат творчеству, а не наоборот.</p>
-        </div>
-        
-        <div>
-            <a href="#mixing" class="btn" style="background: #d4af37; color: #0a0a16; border: 1px solid #d4af37; margin-right: 15px;">Послушать</a>
-            <a href="#contact" class="btn">Связаться</a>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- Секция "Студия" -->
     <section id="studio">
@@ -775,7 +775,7 @@
                 <div class="audio-player">
                     <div class="audio-title">Сведение 1</div>
                     <p class="audio-description">Профессиональное сведение трека</p>
-                    <audio controls>
+                    <audio controls data-start="45">
                         <source src="audio/mixing/mixing1.mp3" type="audio/mpeg">
                         Ваш браузер не поддерживает аудио элемент
                     </audio>
@@ -784,7 +784,7 @@
                 <div class="audio-player">
                     <div class="audio-title">Сведение 2</div>
                     <p class="audio-description">Сведение с акцентом на вокал</p>
-                    <audio controls>
+                    <audio controls data-start="30">
                         <source src="audio/mixing/mixing2.mp3" type="audio/mpeg">
                     </audio>
                 </div>
@@ -792,7 +792,7 @@
                 <div class="audio-player">
                     <div class="audio-title">Сведение 3</div>
                     <p class="audio-description">Сведение инструментальной композиции</p>
-                    <audio controls>
+                    <audio controls data-start="60">
                         <source src="audio/mixing/mixing3.mp3" type="audio/mpeg">
                     </audio>
                 </div>
@@ -806,14 +806,14 @@
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon">🎹</div>
-                <h3 class="service-title">льные аранжировки</h3>
+                <h3 class="service-title">Музыкальные аранжировки</h3>
                 <p class="service-description">Создание полноценных инструментальных партий, разработка гармонической структуры и ритмических паттернов для ваших песен</p>
                 
                 <!-- Аудио из папки audio/arrangements/ -->
                 <div class="audio-player">
                     <div class="audio-title">Аранжировка 1</div>
                     <p class="audio-description">Поп-аранжировка с современными элементами</p>
-                    <audio controls>
+                    <audio controls data-start="50">
                         <source src="audio/arrangements/arrange1.mp3" type="audio/mpeg">
                     </audio>
                 </div>
@@ -821,7 +821,7 @@
                 <div class="audio-player">
                     <div class="audio-title">Аранжировка 2</div>
                     <p class="audio-description">Джазовая аранжировка с импровизацией</p>
-                    <audio controls>
+                    <audio controls data-start="40">
                         <source src="audio/arrangements/arrange2.mp3" type="audio/mpeg">
                     </audio>
                 </div>
@@ -829,7 +829,7 @@
                 <div class="audio-player">
                     <div class="audio-title">Аранжировка 3</div>
                     <p class="audio-description">Электронная аранжировка с синтезаторами</p>
-                    <audio controls>
+                    <audio controls data-start="35">
                         <source src="audio/arrangements/arrange3.mp3" type="audio/mpeg">
                     </audio>
                 </div>
@@ -837,44 +837,44 @@
         </div>
     </section>
 
- <!-- Секция "Музыка" с примерами -->
-<section id="music">
-    <h2 class="section-title">Авторская музыка</h2>
-    <div class="services-grid">
-        <div class="service-card">
-            <div class="service-icon">🎵</div>
-            <h3 class="service-title">Оригинальные композиции</h3>
-            <p class="service-description">Создание уникальных музыкальных произведений в различных жанрах - от инструментальных пьес до полных вокальных треков</p>
-            
-            <!-- Контейнер для горизонтального расположения видео -->
-            <div style="display: flex; gap: 20px; margin-bottom: 2rem; flex-wrap: wrap;">
-                <div style="flex: 1; min-width: 300px;">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/IuIlAwnzw4Q?si=gxCrsKDFo57uOrko" 
-                                title="YouTube video player" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                        </iframe>
+    <!-- Секция "Музыка" с примерами -->
+    <section id="music">
+        <h2 class="section-title">Авторская музыка</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🎵</div>
+                <h3 class="service-title">Оригинальные композиции</h3>
+                <p class="service-description">Создание уникальных музыкальных произведений в различных жанрах - от инструментальных пьес до полных вокальных треков</p>
+                
+                <!-- Контейнер для горизонтального расположения видео -->
+                <div style="display: flex; gap: 20px; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/IuIlAwnzw4Q?si=gxCrsKDFo57uOrko" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div style="flex: 1; min-width: 300px;">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/DRtSXxxR1HE?si=FwVyw71AMKDGuBZt" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
                     </div>
                 </div>
-                <div style="flex: 1; min-width: 300px;">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/DRtSXxxR1HE?si=FwVyw71AMKDGuBZt" 
-                                title="YouTube video player" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
                 
                 <!-- Аудио из папки audio/music/ -->
                 <div class="audio-player">
                     <div class="audio-title">Композиция 1</div>
                     <p class="audio-description">Инструментальная пьеса в жанре эмбиент</p>
-                    <audio controls>
+                    <audio controls data-start="45">
                         <source src="audio/music/music1.mp3" type="audio/mpeg">
                     </audio>
                 </div>
@@ -882,7 +882,7 @@
                 <div class="audio-player">
                     <div class="audio-title">Композиция 2</div>
                     <p class="audio-description">Электро-поп композиция с вокалом</p>
-                    <audio controls>
+                    <audio controls data-start="30">
                         <source src="audio/music/music2.mp3" type="audio/mpeg">
                     </audio>
                 </div>
@@ -890,7 +890,7 @@
                 <div class="audio-player">
                     <div class="audio-title">Композиция 3</div>
                     <p class="audio-description">Рок-композиция с живыми инструментами</p>
-                    <audio controls>
+                    <audio controls data-start="60">
                         <source src="audio/music/music3.mp3" type="audio/mpeg">
                     </audio>
                 </div>
@@ -1022,20 +1022,82 @@
             observer.observe(el);
         });
 
-            // Автоматическая остановка других аудио при воспроизведении
-    const audioPlayers = document.querySelectorAll('audio');
-    
-    audioPlayers.forEach(player => {
-        player.addEventListener('play', function() {
-            // Останавливаем все аудио, кроме текущего
-            audioPlayers.forEach(otherPlayer => {
-                if (otherPlayer !== player && !otherPlayer.paused) {
-                    otherPlayer.pause();
-                    otherPlayer.currentTime = 0; // Сбрасываем позицию
+        // Состояния для хранения позиции воспроизведения
+        const audioStates = new Map();
+        const videoStates = new Map();
+        
+        // Автоматическая остановка других медиа и сохранение позиции
+        function handleMediaPlay(event) {
+            const currentMedia = event.target;
+            
+            // Останавливаем все другие аудио (сохраняя позицию)
+            document.querySelectorAll('audio').forEach(audio => {
+                if (audio !== currentMedia && !audio.paused) {
+                    audioStates.set(audio, audio.currentTime);
+                    audio.pause();
+                }
+            });
+            
+            // Останавливаем все видео
+            stopAllVideos();
+        }
+        
+        // Инициализация аудио-плееров
+        document.querySelectorAll('audio').forEach(audio => {
+            // Устанавливаем начальный таймкод из data-start (если задан)
+            const startTime = parseFloat(audio.getAttribute('data-start')) || 0;
+            audio.currentTime = startTime;
+            
+            // Сохраняем начальную позицию
+            audioStates.set(audio, startTime);
+            
+            // Обработчик воспроизведения
+            audio.addEventListener('play', handleMediaPlay);
+            
+            // Восстанавливаем позицию при паузе/остановке
+            audio.addEventListener('pause', () => {
+                audioStates.set(audio, audio.currentTime);
+            });
+            
+            // Восстанавливаем позицию при клике
+            audio.addEventListener('click', () => {
+                if (audioStates.has(audio)) {
+                    audio.currentTime = audioStates.get(audio);
                 }
             });
         });
-    });
+        
+        // Функция для остановки YouTube видео
+        function stopAllVideos() {
+            document.querySelectorAll('.video-container iframe').forEach(iframe => {
+                const src = iframe.src;
+                iframe.src = '';
+                setTimeout(() => { iframe.src = src; }, 100);
+            });
+        }
+        
+        // Обработчики для YouTube видео
+        document.querySelectorAll('.video-container').forEach(container => {
+            container.addEventListener('click', () => {
+                // Останавливаем все аудио при воспроизведении видео
+                document.querySelectorAll('audio').forEach(audio => {
+                    if (!audio.paused) {
+                        audioStates.set(audio, audio.currentTime);
+                        audio.pause();
+                    }
+                });
+                
+                // Останавливаем другие видео
+                document.querySelectorAll('.video-container').forEach(other => {
+                    if (other !== container) {
+                        const iframe = other.querySelector('iframe');
+                        const src = iframe.src;
+                        iframe.src = '';
+                        setTimeout(() => { iframe.src = src; }, 100);
+                    }
+                });
+            });
+        });
 
         // Обработка формы
         document.getElementById('contactForm').addEventListener('submit', function(e) {
@@ -1043,8 +1105,6 @@
             alert('Сообщение отправлено! Я свяжусь с вами в ближайшее время.');
             this.reset();
         });
-
-        
     </script>
 </body>
 </html>
