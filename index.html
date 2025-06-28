@@ -1017,12 +1017,29 @@
             observer.observe(el);
         });
 
+            // Автоматическая остановка других аудио при воспроизведении
+    const audioPlayers = document.querySelectorAll('audio');
+    
+    audioPlayers.forEach(player => {
+        player.addEventListener('play', function() {
+            // Останавливаем все аудио, кроме текущего
+            audioPlayers.forEach(otherPlayer => {
+                if (otherPlayer !== player && !otherPlayer.paused) {
+                    otherPlayer.pause();
+                    otherPlayer.currentTime = 0; // Сбрасываем позицию
+                }
+            });
+        });
+    });
+
         // Обработка формы
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Сообщение отправлено! Я свяжусь с вами в ближайшее время.');
             this.reset();
         });
+
+        
     </script>
 </body>
 </html>
